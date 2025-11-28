@@ -98,3 +98,9 @@ A simple URL shortening service built with **Java** + **Spring Boot** for the ba
 - The backend uses an **H2 in-memory database**, so all data is lost on restart.
 - Short codes are generated using a **Base62 encoding** of a sequence ID.
 - Expired links return HTTP `410 Gone`.
+
+---
+
+## Postman
+
+You can import the Postman collection from [here](url.postman_collection.json)
