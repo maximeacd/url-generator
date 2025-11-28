@@ -61,7 +61,7 @@ A simple URL shortening service built with **Java** + **Spring Boot** for the ba
 
 3. Run the Angular app:
     ```bash
-    ng serve
+    ng serve --proxy-config src/proxy.config.json
     ```
 
 4. Open your browser:
