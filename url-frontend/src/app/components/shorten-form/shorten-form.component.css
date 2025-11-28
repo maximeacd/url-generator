@@ -1,0 +1,124 @@
+.shorten-form-container {
+  width: 500px;          
+  max-width: 90%;         
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #4f46e5; /* indigo */
+  box-shadow: 0 0 0 2px rgba(79,70,229,0.2);
+}
+
+button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4f46e5;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #4338ca;
+}
+
+.loading {
+  display: inline-block;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.result-card {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.result-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.short-url {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.short-url a {
+  font-weight: bold;
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.short-url a:hover {
+  text-decoration: underline;
+}
+
+.short-url button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #6366f1;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.short-url button:hover {
+  background-color: #4f46e5;
+}
+
+.back-btn {
+  margin-top: 10px;
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.back-btn:hover {
+  background-color: #d1d5db;
+}

@@ -1,0 +1,39 @@
+<div class="shorten-form-container">
+  <h2>Shorten your URL</h2>
+
+  <form (ngSubmit)="submit()" class="form">
+    <input
+      type="url"
+      placeholder="Enter your URL"
+      [(ngModel)]="url"
+      name="url"
+      required
+    />
+    <input
+      type="text"
+      placeholder="Custom alias"
+      [(ngModel)]="customAlias"
+      name="customAlias"
+    />
+    <input
+      type="datetime-local"
+      [(ngModel)]="expiresAt"
+      name="expiresAt"
+    />
+
+    <button type="submit" [disabled]="loading">
+      <span *ngIf="!loading">Generate</span>
+      <span *ngIf="loading" class="loading">Generating...</span>
+    </button>
+  </form>
+
+  <div *ngIf="result" class="result-card">
+    <h3>Shortened URL</h3>
+    <div class="short-url">
+      <a [href]="result.shortUrl" target="_blank">{{ result.shortUrl }}</a>
+      <button (click)="copyToClipboard(result.shortUrl)">Copy</button>
+    </div>
+    <p *ngIf="result.title">{{ result.title }}</p>
+    <button class="back-btn" (click)="backToForm()">Shorten another URL</button>
+  </div>
+</div>
