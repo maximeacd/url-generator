@@ -30,7 +30,7 @@
   <div *ngIf="result" class="result-card">
     <h3>Shortened URL</h3>
     <div class="short-url">
-      <a [href]="result.shortUrl" target="_blank">{{ result.shortUrl }}</a>
+      <a [href]="result.shortUrl" target="_blank">{{ result.shortCode || result.shortUrl }}</a>
       <button (click)="copyToClipboard(result.shortUrl)">Copy</button>
     </div>
     <p *ngIf="result.title">{{ result.title }}</p>
