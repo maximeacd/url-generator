@@ -18,7 +18,7 @@ public class LinkResponse {
     public static LinkResponse from(Link link, String baseUrl) {
         LinkResponse res = new LinkResponse();
         res.shortCode = link.getShortCode();
-        res.shortUrl = baseUrl + "/" + link.getShortCode();
+        res.shortUrl = baseUrl + "/api/redirect/" + link.getShortCode();
         res.originalUrl = link.getOriginalUrl();
         res.createdAt = link.getCreatedAt();
         res.expiresAt = link.getExpiresAt();
